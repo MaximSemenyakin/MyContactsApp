@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <data>
+        
+        <variable
+            name="contact"
+            type="com.example.mycontactsapp.Contact" />
+        
+    </data>
+
+    <androidx.cardview.widget.CardView
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{contact.firstName}"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/textViewLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="@{contact.lastName}"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{contact.email}"
+                android:textStyle="normal"/>
+
+            <TextView
+                android:id="@+id/textViewPhoneNumber"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:text="@{contact.phoneNumber}"
+                android:textStyle="normal">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
